@@ -16,4 +16,8 @@ Gem::Specification.new do |gem|
   gem.executables   = ["safe_yaml"]
 
   gem.required_ruby_version = ">= 1.8.7"
+
+  if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('3.3')
+    s.add_dependency("base64", ">= 0.1.0")
+  end
 end
